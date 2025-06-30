@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Process Your Image</h1>
+        <div class="image-display">
+            <h2>Original Image:</h2>
+            <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Original Image" class="original-image">
+        </div>
+        <form method="post" class="filter-form">
+            <label for="filter">Select Filter:</label>
+            <select name="filter" id="filter">
+                <option value="original">Original</option>
+                <option value="blur">Blur</option>
+                <option value="contour">Contour</option>
+                <option value="edge_enhance">Edge Enhance</option>
+                <option value="grayscale">Grayscale</option>
+            </select>
+            <button type="submit" class="apply-button">Apply Filter</button>
+        </form>
+        <div class="back-link">
+            <a href="{{ url_for('upload_file') }}">Upload Another Image</a>
+        </div>
+    </div>
+</body>
+</html>

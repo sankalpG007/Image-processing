@@ -1,0 +1,268 @@
+/* static/style.css */
+/* static/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image name */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+
+.hero {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white overlay */
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+    color: #333;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1.5px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Upload Form Styles */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: #007bff; /* Blue primary color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+}
+
+.upload-icon {
+    margin-right: 10px;
+}
+
+.hidden-input {
+    display: none;
+}
+
+#file-name {
+    margin-bottom: 25px;
+    color: #777;
+    font-style: italic;
+    font-size: 1em;
+}
+
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background-color: #28a745; /* Green accent color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:hover {
+    background-color: #1e7e34;
+    transform: scale(1.03);
+}
+
+/* ... (rest of your CSS for other pages remains the same or can be further styled) ... */
+
+/* Upload Page Styles */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00bcd4; /* Teal upload button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-button:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+.hidden-input {
+    display: none;
+}
+
+#file-name {
+    margin-bottom: 25px;
+    color: #777;
+    font-style: italic;
+    font-size: 1em;
+}
+
+.submit-button {
+    padding: 15px 35px;
+    background-color: #4caf50; /* Green submit button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Process Page Styles */
+.image-display {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.original-container h2, .processed-container h2 {
+    color: blue;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.original-image, .processed-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .image-display {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .original-container, .processed-container {
+        width: 48%;
+    }
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.filter-form label {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.3em;
+}
+
+.filter-form select {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+    width: 250px;
+    font-size: 1.1em;
+    appearance: none; /* Remove default arrow for custom styling */
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+                      linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+                         calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+.apply-button {
+    padding: 15px 35px;
+    background-color: #ffc107; /* Amber apply button */
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apply-button:hover {
+    background-color: #e0ab00;
+    transform: scale(1.05);
+}
+
+/* General Styles */
+.back-link {
+    margin-top: 40px;
+}
+
+.back-link a {
+    color: #1900d4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #0097a7;
+    text-decoration: underline;
+    transform: scale(1.02);
+}
